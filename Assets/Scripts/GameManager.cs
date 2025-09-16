@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
         npc2 = new Npc("Marco", Emotion.Sad, "hola caraon con cola");
         npc3 = new Npc("Marco", Emotion.Sad, "hola caraon con cola");
     }
-
+     
     // Update is called once per frame
     void Update()
     {
