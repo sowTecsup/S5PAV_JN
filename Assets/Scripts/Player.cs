@@ -1,16 +1,29 @@
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player 
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public int life = 10;
+    public int atk = 10;
+
+    public Player(int _life)
     {
-        
+        life = _life;
     }
 
-    // Update is called once per frame
-    void Update()
+    public static Player operator +(Player a, Player b)
     {
-        
+        return new Player(a.life + b.life);
+    }
+    public static Player operator /(Player a , int x)
+    {
+        return new Player(a.life/x);
+    }
+    public static bool operator ==(Player a, Player b)
+    {
+        return a.life == b.life;
+    }
+    public static bool operator !=(Player a, Player b)
+    {
+        return a.life != b.life;
     }
 }
